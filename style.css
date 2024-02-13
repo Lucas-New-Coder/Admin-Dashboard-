@@ -1,0 +1,412 @@
+
+.fullContainer /* Page Setup */{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: row;
+}
+
+.gridContainer /* Grid Setup */{
+    display: grid;
+    background-color: rgb(49, 50, 56);
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns:  repeat(1,5fr) repeat(1,1fr);
+    grid-template-areas:  "header header"
+                          "a announcementsTitle"
+                          "content announcements"
+                          "content announcements"
+                          "content announcements"
+                          "content announcements"
+                          "content announcements"
+                          "content announcements"
+                          "content announcements"
+                          "content trendingTitle"
+                          "content trending"
+                          "content trending"
+                          "content trending"
+                          "content trending"
+                          "content trending"
+                          "content trending"
+                          "content trending";
+                        
+    gap: 15px;
+    padding-bottom: 15px;
+    overflow: auto;
+    
+}
+.announcementsTitle{
+    color: white;
+    grid-area: announcementsTitle;
+    font-size: 1.5rem;  
+    height: 0; 
+    font-family: 'montserrat';
+    font-weight: 800;
+    font-size: 1rem;
+}
+.trendingTitle{
+    color: white;
+    grid-area: trendingTitle;
+    font-size: 1.5rem;
+    font-family: 'montserrat';
+    font-weight: 800;
+    font-size: 1rem;
+}
+.a{
+    color: white;
+    margin: 0;
+    grid-area: a;
+    margin-left: 30px;
+    font-size: 1.5rem;
+    font-family: 'montserrat';
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+/* sideBar Starts Here */
+
+.sideBar{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    width: 50px;
+    background-color: rgb(36, 36, 44);
+    overflow: hidden;
+    transition: 800ms;
+    
+   
+}
+.sideBar:hover{
+    width: 250px;
+}
+.logo,
+.menuItem img{
+    position: relative;
+    left: 5px;
+    right: 5px;
+    width: 30px;
+    filter: invert(100%);
+}
+.logoCont{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-top: 10px;
+ 
+    
+}
+.logoCont h1{
+    font-size: 1.5rem;
+    position: relative;
+    left: 25px;
+    font-family: 'Montserrat';
+    font-weight: 900;
+    color: rgb(255, 196, 0);
+}
+.menuItemCont{
+    display: flex;  
+    align-items: center;
+    transition: 800ms;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.menuItemCont:hover{
+    background-color: rgb(95, 93, 231);
+    transition: 600ms;
+}
+
+.menuItemCont span{
+    font-size: 1rem;
+    position: relative;
+    left: 25px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: white;
+}
+
+.socialMenu{
+    position: relative;
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 99px;
+    gap: 15px;
+    flex-direction: column;   
+}
+.optionsMenu{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+/* sideBar Ends Here */
+
+
+.header{
+    display: grid;
+    background-color: rgb(120, 156, 167);
+    grid-area: header; 
+    -webkit-box-shadow: 4px 4px 60px 0px rgba(0,0,0,1);
+-moz-box-shadow: 4px 4px 60px 0px rgba(0,0,0,1);
+box-shadow: 4px 4px 60px 0px rgba(0,0,0,1);
+}
+.topHeader{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.header img{
+    width: 30px;
+}
+.input{
+    display: grid;
+    grid-template-columns: 1fr 30fr ;
+    align-items: center;
+    padding-left: 25px;
+}
+input[type="text"]{
+    max-width: 500px;
+    height: 23px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: "Montserrat";
+    font-size: .8rem;
+    font-weight: 600;
+    transition: 600ms;
+}
+input:focus{
+    background-color: rgb(88, 87, 128);
+    color: white;
+    
+}
+.notif,
+.search{
+    max-width: 25px;
+    justify-self: right;
+}
+.profileInfo{
+    max-width: 250px;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr ;
+    
+}
+.userName{
+    font-family: 'montserrat';
+    font-size: 1rem;
+    font-weight: 800;
+}
+.profileContainer{
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background-image: url(assets/profilePic.jpg) ;
+    background-position: center;
+    background-size: cover;
+}
+.lowerHeader{
+    display: grid;
+    padding-left: 25px;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+}
+.profileContainerGreatings{
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 4fr ;
+}
+.profilePic{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-image: url(assets/profilePic.jpg) ;
+    background-position: center;
+    background-size: cover;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 100px));
+    gap: 10px;
+}
+.button{
+    text-align: center;
+    background-color: rgb(224, 240, 241);
+    border-radius: 50px;
+    font-family: 'montserrat';
+    font-weight: 900;
+    cursor: pointer;
+    transition: 600ms;
+}
+.button:hover{
+    background-color: rgb(95, 93, 231);
+    color:white;
+    transform: scale(1.03);
+}
+.greatings h6{
+    font-family: 'montserrat';
+    font-size: .8rem;
+}
+.greatings h2{
+    font-family: 'montserrat';
+    font-size: 1.4rem; 
+}
+/* Content Starts Here */
+
+.content{
+    display: grid;
+    grid-area: content;
+    height: 100%;
+    margin-left: 30px;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 15px;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;   
+    border-radius: 10px; 
+    border-left: 5px rgb(255, 196, 0) solid;
+    transition: 800ms;
+    -webkit-box-shadow: 4px 4px 0px 0px rgb(202, 202, 218);
+    -moz-box-shadow: 4px 4px 0px 0px rgb(202, 202, 218);
+    box-shadow: 4px 4px 0px 0px rgb(202, 202, 218);
+}
+.card:hover{
+    transform: scale(1.03);
+    transition: 450ms;
+    border-left: 5px solid lightblue;
+}
+.card h1,
+.card p{
+    margin-left: 15px;
+}
+.card h1{
+    font-size: 1rem;
+    font-family: "montserrat";
+    font-weight: 900;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.card p{
+    font-size: .8rem;
+    font-family: "montserrat";
+    line-height: 1.45rem;
+    margin-right: 25px;
+}
+.contentButtons{
+    display: grid;
+    align-self: flex-end; /* Alinha no final do card */
+    justify-self: flex-end;
+    grid-template-columns: repeat(3,1fr);
+    width: 150px; 
+    cursor: pointer;
+}
+.contentButtons *{
+    width: 50%;
+}
+
+/* Content Ends Here */
+
+.announcements{
+    background-color: rgb(255, 255, 255);
+    grid-area:announcements ;
+    display: grid;
+    grid-template-rows: .9fr .9fr .9fr;
+    border-radius: 15px;
+    gap: 10px;
+    
+}
+.announcementsBody{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    font-family: 'montserrat';
+    justify-content: center;
+}
+.announcementsBody::after{
+    content: '';
+    align-self: center;
+    padding-bottom:10px ;
+    z-index: 99;
+    width: 85%;
+    border-bottom: 2px solid rgb(182, 182, 182);
+}
+.announcementsName{
+    padding-top: 15px;
+    font-size: .8rem;
+    padding-bottom: 5px;
+}
+.announcementsText{
+    font-size: .7rem;
+}
+
+.trending{
+    background-color: rgb(255, 255, 255);
+    grid-area: trending;
+}
+
+.announcements,
+.trending{
+    margin-right: 15px;
+    border-radius: 15px;
+}
+.announcements{
+    max-height: 310px;
+}
+.trending{
+    max-height: 250px;
+}
+.trendingItem{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    font-family: 'montserrat';
+    padding-block: 5px;
+    padding-left: 5px;
+}
+.trendingContainer{
+    display: grid;
+    gap: 20px;
+}
+.trendingPic,
+.trendingPic2,
+.trendingPic3,
+.trendingPic4{
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+.trendingPic{
+    background-image: url(assets/profilePic.jpg);
+
+}
+.trendingPic2{
+    background-image: url(assets/profilePic2.jpg);
+
+}
+.trendingPic3{
+    background-image: url(assets/profilePic3.jpg);
+
+}
+.trendingPic4{
+    background-image: url(assets/profilePic4.jpg);
+
+}
+.trendingPerson{
+    font-size: 1rem;
+}
+.personMeaning{
+    font-size: .8rem;
+}
